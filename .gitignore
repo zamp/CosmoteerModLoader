@@ -2,3 +2,7 @@
 /bin
 /obj
 /CosmoteerModLoader.sln.DotSettings.user
+/CosmoteerModLoader/bin
+/CosmoteerModLoader/obj
+/ExampleMod/bin
+/ExampleMod/obj

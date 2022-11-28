@@ -1,0 +1,24 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>net6.0</TargetFramework>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <Nullable>enable</Nullable>
+        <LangVersion>10</LangVersion>
+        <OutputType>Exe</OutputType>
+    </PropertyGroup>
+
+    <ItemGroup>
+      <Reference Include="Cosmoteer">
+        <HintPath>D:\SteamLibrary\steamapps\common\Cosmoteer\Bin\Cosmoteer.dll</HintPath>
+      </Reference>
+      <Reference Include="HalflingCore">
+        <HintPath>D:\SteamLibrary\steamapps\common\Cosmoteer\Bin\HalflingCore.dll</HintPath>
+      </Reference>
+    </ItemGroup>
+
+    <Target Name="PostBuild" AfterTargets="PostBuildEvent">
+      <Exec Command="call &quot;$(SolutionDir)copy_files.bat&quot; &quot;$(TargetDir)&quot;" />
+    </Target>
+
+</Project>
